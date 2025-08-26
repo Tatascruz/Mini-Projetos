@@ -9,24 +9,24 @@ func main() {
 	var nota float64
 	var hobby string
 
-	fmt.Print("Thálita")
+	fmt.Print("Digite seu nome: ")
 	fmt.Scanln(&nome)
-	fmt.Print("39")
+	fmt.Print("Digite sua idade: ")
 	fmt.Scanln(&idade)
-	fmt.Print("Campinas")
+	fmt.Print("Digite sua cidade: ")
 	fmt.Scanln(&cidade)
-	fmt.Print("8")
+	fmt.Print("Digite sua nota: ")
 	fmt.Scanln(&nota)
-	fmt.Print("Assistir doramas")
+	fmt.Print("Digite seu hobby: ")
 	fmt.Scanln(&hobby)
 
-	fmt.Println("\nresumo:")
+	fmt.Println("\nResumo:")
 	fmt.Println("Nome:", nome)
 	fmt.Println("Idade:", idade)
 	fmt.Println("Cidade:", cidade)
 	fmt.Println("Hobby:", hobby)
 
-	if nota <= 7 {
+	if nota >= 7 {
 		fmt.Println("Situação: Aprovado")
 	} else if nota >= 5 {
 		fmt.Println("Situação: Recuperação")
