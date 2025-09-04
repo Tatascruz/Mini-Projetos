@@ -9,7 +9,7 @@ type Usuario struct {
 }
 
 func main() {
-	usuarios := []Usuario{}
+	var usuarios []Usuario
 	var opcao int
 
 	for {
@@ -17,6 +17,7 @@ func main() {
 		fmt.Println("1 - Adicionar usuário")
 		fmt.Println("2 - Listar usuários")
 		fmt.Println("3 - Sair")
+		fmt.Println("4 - Remover usuário")
 		fmt.Print("Escolha uma opção: ")
 		fmt.Scanln(&opcao)
 
@@ -39,6 +40,19 @@ func main() {
 		} else if opcao == 3 {
 			fmt.Println("Saindo...")
 			break
+
+		} else if opcao == 4 {
+			var indice int
+			fmt.Print("Digite o índice do usuário que deseja remover: ")
+			fmt.Scanln(&indice)
+
+			if indice >= 0 && indice < len(usuarios) {
+				usuarios = append(usuarios[:indice], usuarios[indice+1:]...)
+				fmt.Println("Usuário removido!")
+			} else {
+				fmt.Println("Índice inválido!")
+			}
+
 		} else {
 			fmt.Println("Opção inválida")
 		}
