@@ -17,15 +17,20 @@ func main() {
 		fmt.Println("1 - Adicionar tarefa")
 		fmt.Println("2 - Ver tarefas")
 		fmt.Println("3 - Sair")
-		fmt.Println("Escolha uma opção: ")
+		fmt.Print("Escolha uma opção: ")
 		fmt.Scanln(&opcao)
 
 		if opcao == 1 {
 			fmt.Print("Digite a tarefa: ")
 			entrada, _ := reader.ReadString('\n')
 			novaTarefa := strings.TrimSpace(entrada)
+			if novaTarefa == "" {
+				fmt.Println("A tarefa não pode ficar vazia.")
+				continue
+			}
 			tarefas = append(tarefas, novaTarefa)
 			fmt.Println("Tarefa adicionada!")
+
 		} else if opcao == 2 {
 			if len(tarefas) == 0 {
 				fmt.Println("Nenhuma tarefa adicionada ainda.")
