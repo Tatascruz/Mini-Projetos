@@ -13,7 +13,7 @@ func main() {
 	var opcao int
 
 	for {
-		fmt.Println("\nSitema de Usuários")
+		fmt.Println("\nSistema de Usuários")
 		fmt.Println("1 - Adicionar usuário")
 		fmt.Println("2 - Listar usuários")
 		fmt.Println("3 - Sair")
@@ -32,6 +32,7 @@ func main() {
 			fmt.Scanln(&email)
 			usuarios = append(usuarios, Usuario{Nome: nome, Idade: idade, Email: email})
 			fmt.Println("Usuário adicionado!")
+
 		} else if opcao == 2 {
 			fmt.Println("Lista de Usuários:")
 			for i, u := range usuarios {
@@ -42,19 +43,21 @@ func main() {
 			break
 
 		} else if opcao == 4 {
-			var indice int
-			fmt.Print("Digite o índice do usuário que deseja remover: ")
-			fmt.Scanln(&indice)
+			var numero int
+			fmt.Print("Digite o número do usuário que deseja remover: ")
+			fmt.Scanln(&numero)
 
+			indice := numero - 1
 			if indice >= 0 && indice < len(usuarios) {
 				usuarios = append(usuarios[:indice], usuarios[indice+1:]...)
 				fmt.Println("Usuário removido!")
 			} else {
-				fmt.Println("Índice inválido!")
+				fmt.Println("Número inválido!")
 			}
 
 		} else {
 			fmt.Println("Opção inválida")
 		}
 	}
+
 }
