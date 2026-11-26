@@ -7,7 +7,7 @@ import (
 
 func main() {
 	// Número secreto definido pelo jogo
-	var segredo := rand.Intn(10) + 1
+	segredo := rand.Intn(10) + 1
 	// Variável que armazena a tentativa do jogador
 	var tentativa int
 
