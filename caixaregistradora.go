@@ -9,7 +9,7 @@ func main() {
 
 	total := 0.0
 
-	// Exibir  os produtos e somar total
+	// Exibir os produtos e somar total
 	fmt.Println("Produtos disponíveis:")
 	for i := 0; i < len(produtos); i++ {
 		fmt.Printf("%d - %s: R$ %.2f\n", i+1, produtos[i], precos[i])
@@ -22,7 +22,7 @@ func main() {
 
 	// Mostrar resultado
 	fmt.Printf("\nTotal sem desconto: R$ %.2f\n", total)
-	fmt.Printf("Total com desconto de 10%%: R$ %2f\n", totalComDesconto)
+	fmt.Printf("Total com desconto de 10%%: R$ %.n2f\n", totalComDesconto)
 
 	// Extra: permitir adicionar novos produtos
 	var adicionar string
