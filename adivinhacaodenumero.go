@@ -2,12 +2,13 @@ package main
 
 import (
 	"fmt"
+	"math/rand"
 )
 
 func main() {
 	// Número secreto definido pelo jogo
-	var segredo int = 7
-	// Variável que armazenar a tentativa do jagor
+	var segredo := rand.Intn(10) + 1
+	// Variável que armazena a tentativa do jogador
 	var tentativa int
 
 	fmt.Println("=== Jogo da Adivinhação ===")
